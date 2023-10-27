@@ -3,8 +3,8 @@
 # SW Build 3865809 on Sun May  7 15:05:29 MDT 2023
 # IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
 # SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
-# Start of session at: Thu Oct 26 18:22:09 2023
-# Process ID: 13212
+# Start of session at: Fri Oct 27 20:56:30 2023
+# Process ID: 19568
 # Current directory: D:/SSC/VGA/VGA.runs/synth_1
 # Command line: vivado.exe -log vga_controller.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source vga_controller.tcl
 # Log file: D:/SSC/VGA/VGA.runs/synth_1/vga_controller.vds

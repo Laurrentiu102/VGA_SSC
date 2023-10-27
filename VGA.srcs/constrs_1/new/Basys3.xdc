@@ -45,3 +45,6 @@ set_property IOSTANDARD LVCMOS33 [get_ports horizontal_sync_o]
 #Bank = 14, Pin name = ,				Sch name = VGA_VS
 set_property PACKAGE_PIN R19 [get_ports vertical_sync_o]
 set_property IOSTANDARD LVCMOS33 [get_ports vertical_sync_o]
+
+set_property PACKAGE_PIN V17 [get_ports {sw}]					
+	set_property IOSTANDARD LVCMOS33 [get_ports {sw}]

@@ -29,3 +29,5 @@ set_property src_info {type:XDC file:1 line:43 export:INPUT save:INPUT read:READ
 set_property PACKAGE_PIN P19 [get_ports horizontal_sync_o]
 set_property src_info {type:XDC file:1 line:46 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN R19 [get_ports vertical_sync_o]
+set_property src_info {type:XDC file:1 line:49 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN V17 [get_ports {sw}]

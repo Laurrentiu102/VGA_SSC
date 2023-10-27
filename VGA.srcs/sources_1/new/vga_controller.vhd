@@ -6,6 +6,7 @@ use work.resolution.all;
 entity vga_controller is
     port( 
          clk_board: in std_logic;
+         sw: in std_logic;
          horizontal_sync_o: out std_logic;
          vertical_sync_o: out std_logic;
  		 vga_red_o : out STD_LOGIC_VECTOR (3 downto 0);
@@ -61,19 +62,22 @@ component bram is
     port(
          clk: in std_logic;
          read_address: in natural;
-         read_data: out std_logic_vector(11 downto 0)
+         read_data: out std_logic_vector(11 downto 0);
+         read_data1: out std_logic_vector(11 downto 0)
          );
 end component;
 
 signal read_address:natural:=0;
 signal data:std_logic_vector(11 downto 0);
+signal data1:std_logic_vector(11 downto 0);
 
 begin
 
     ram: bram port map(
         clk => clk,
         read_address => read_address,
-        read_data => data
+        read_data => data,
+        read_data1 => data1
         );
 
     clk_gen: clk_mul port map(
@@ -118,9 +122,15 @@ begin
 				            read_address<=0;
 				        end if;
 				        
-				        vga_red_o <= data(11 downto 8);
-				        vga_green_o <= data(7 downto 4);
-				        vga_blue_o <= data(3 downto 0);
+				        if sw='1' then
+                            vga_red_o <= data(11 downto 8);
+                            vga_green_o <= data(7 downto 4);
+                            vga_blue_o <= data(3 downto 0);
+				        else
+				            vga_red_o <= data1(11 downto 8);
+                            vga_green_o <= data1(7 downto 4);
+                            vga_blue_o <= data1(3 downto 0);
+				        end if;
 				    else
 				        vga_red_o    <= "0000";
          			    vga_green_o  <= "0000";
