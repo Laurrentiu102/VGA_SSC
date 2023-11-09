@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
-| Date         : Fri Oct 27 20:57:56 2023
+| Date         : Thu Nov  9 18:58:48 2023
 | Host         : LAURPC running 64-bit major release  (build 9200)
 | Command      : report_utilization -file vga_controller_utilization_synth.rpt -pb vga_controller_utilization_synth.pb
 | Design       : vga_controller
@@ -31,11 +31,11 @@ Table of Contents
 +-------------------------+-------+-------+------------+-----------+-------+
 |        Site Type        |  Used | Fixed | Prohibited | Available | Util% |
 +-------------------------+-------+-------+------------+-----------+-------+
-| Slice LUTs*             | 17891 |     0 |          0 |     20800 | 86.01 |
-|   LUT as Logic          | 17891 |     0 |          0 |     20800 | 86.01 |
+| Slice LUTs*             | 17902 |     0 |          0 |     20800 | 86.07 |
+|   LUT as Logic          | 17902 |     0 |          0 |     20800 | 86.07 |
 |   LUT as Memory         |     0 |     0 |          0 |      9600 |  0.00 |
-| Slice Registers         |  3522 |     0 |          0 |     41600 |  8.47 |
-|   Register as Flip Flop |  3522 |     0 |          0 |     41600 |  8.47 |
+| Slice Registers         |  3545 |     0 |          0 |     41600 |  8.52 |
+|   Register as Flip Flop |  3545 |     0 |          0 |     41600 |  8.52 |
 |   Register as Latch     |     0 |     0 |          0 |     41600 |  0.00 |
 | F7 Muxes                |  6360 |     0 |          0 |     16300 | 39.02 |
 | F8 Muxes                |   623 |     0 |          0 |      8150 |  7.64 |
@@ -59,7 +59,7 @@ Warning! LUT value is adjusted to account for LUT combining.
 | 0     |          Yes |           - |          Set |
 | 0     |          Yes |           - |        Reset |
 | 0     |          Yes |         Set |            - |
-| 3522  |          Yes |       Reset |            - |
+| 3545  |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -120,7 +120,7 @@ Warning! LUT value is adjusted to account for LUT combining.
 +------------+------+-------+------------+-----------+-------+
 | BUFGCTRL   |    2 |     0 |          0 |        32 |  6.25 |
 | BUFIO      |    0 |     0 |          0 |        20 |  0.00 |
-| MMCME2_ADV |    1 |     0 |          0 |         5 | 20.00 |
+| MMCME2_ADV |    0 |     0 |          0 |         5 |  0.00 |
 | PLLE2_ADV  |    0 |     0 |          0 |         5 |  0.00 |
 | BUFMRCE    |    0 |     0 |          0 |        10 |  0.00 |
 | BUFHCE     |    0 |     0 |          0 |        72 |  0.00 |
@@ -149,25 +149,24 @@ Warning! LUT value is adjusted to account for LUT combining.
 7. Primitives
 -------------
 
-+------------+-------+---------------------+
-|  Ref Name  |  Used | Functional Category |
-+------------+-------+---------------------+
-| LUT6       | 16402 |                 LUT |
-| MUXF7      |  6360 |               MuxFx |
-| FDRE       |  3522 |        Flop & Latch |
-| LUT5       |  1323 |                 LUT |
-| MUXF8      |   623 |               MuxFx |
-| LUT4       |   235 |                 LUT |
-| LUT3       |    68 |                 LUT |
-| RAMB36E1   |    36 |        Block Memory |
-| CARRY4     |    21 |          CarryLogic |
-| LUT2       |    16 |                 LUT |
-| OBUF       |    14 |                  IO |
-| LUT1       |     4 |                 LUT |
-| IBUF       |     2 |                  IO |
-| BUFG       |     2 |               Clock |
-| MMCME2_ADV |     1 |               Clock |
-+------------+-------+---------------------+
++----------+-------+---------------------+
+| Ref Name |  Used | Functional Category |
++----------+-------+---------------------+
+| LUT6     | 16407 |                 LUT |
+| MUXF7    |  6360 |               MuxFx |
+| FDRE     |  3545 |        Flop & Latch |
+| LUT5     |  1325 |                 LUT |
+| MUXF8    |   623 |               MuxFx |
+| LUT4     |   230 |                 LUT |
+| LUT3     |    74 |                 LUT |
+| RAMB36E1 |    36 |        Block Memory |
+| CARRY4   |    25 |          CarryLogic |
+| LUT2     |    20 |                 LUT |
+| OBUF     |    14 |                  IO |
+| LUT1     |     7 |                 LUT |
+| IBUF     |     2 |                  IO |
+| BUFG     |     2 |               Clock |
++----------+-------+---------------------+
 
 
 8. Black Boxes

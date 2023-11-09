@@ -70,6 +70,8 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
+set_param chipscope.maxJobs 3
+set_param xicom.use_bs_reader 1
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7a35tcpg236-1
 
@@ -89,9 +91,10 @@ OPTRACE "Adding files" START { }
 read_vhdl -library xil_defaultlib {
   D:/SSC/VGA/VGA.srcs/sources_1/new/resolution.vhd
   D:/SSC/VGA/VGA.srcs/sources_1/new/bram.vhd
-  D:/SSC/VGA/VGA.srcs/sources_1/new/clk_mul.vhd
+  D:/SSC/VGA/VGA.srcs/sources_1/new/clk_div.vhd
   D:/SSC/VGA/VGA.srcs/sources_1/new/horizontal_counter.vhd
   D:/SSC/VGA/VGA.srcs/sources_1/new/horizontal_sync.vhd
+  D:/SSC/VGA/VGA.srcs/sources_1/new/mpg.vhd
   D:/SSC/VGA/VGA.srcs/sources_1/new/vertical_counter.vhd
   D:/SSC/VGA/VGA.srcs/sources_1/new/vertical_sync.vhd
   D:/SSC/VGA/VGA.srcs/sources_1/new/vga_controller.vhd

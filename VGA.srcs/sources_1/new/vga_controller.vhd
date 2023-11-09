@@ -6,7 +6,7 @@ use work.resolution.all;
 entity vga_controller is
     port( 
          clk_board: in std_logic;
-         sw: in std_logic;
+         btn_in: in std_logic;
          horizontal_sync_o: out std_logic;
          vertical_sync_o: out std_logic;
  		 vga_red_o : out STD_LOGIC_VECTOR (3 downto 0);
@@ -22,9 +22,20 @@ signal draw: std_logic;
 signal horizontal_position:natural:= 0;
 signal vertical_position:natural:=0;
 
-component clk_mul is
-    port(clk_in1 : in std_logic;
-         clk_out1 : out std_logic);
+component bram is
+    port(
+         clk: in std_logic;
+         btn_in: in std_logic;
+         read_address: in natural;
+         read_data: out std_logic_vector(11 downto 0)
+         );
+end component;
+
+component clk_div is
+    port(
+         clk_in: in std_logic;
+         clk_out: out std_logic
+         );
 end component;
 
 component horizontal_counter is
@@ -58,33 +69,22 @@ component vertical_sync is
 	     );
 end component;
 
-component bram is
-    port(
-         clk: in std_logic;
-         read_address: in natural;
-         read_data: out std_logic_vector(11 downto 0);
-         read_data1: out std_logic_vector(11 downto 0)
-         );
-end component;
-
 signal read_address:natural:=0;
 signal data:std_logic_vector(11 downto 0);
-signal data1:std_logic_vector(11 downto 0);
 
 begin
 
-    ram: bram port map(
+
+    ram_images: bram port map(
         clk => clk,
+        btn_in => btn_in,
         read_address => read_address,
-        read_data => data,
-        read_data1 => data1
+        read_data => data);
+    clk_divider: clk_div port map(
+        clk_in => clk_board,
+        clk_out => clk
         );
-
-    clk_gen: clk_mul port map(
-        clk_in1 => clk_board,
-        clk_out1 => clk
-        );
-
+        
     hc: horizontal_counter port map(
         clk => clk,
         horizontal_position => horizontal_position
@@ -108,35 +108,28 @@ begin
         vertical_sync => vertical_sync_o
         );       
     
-    draw <= '1' when horizontal_position < HD and vertical_position < VD else '0';
+    draw <= '1' when (horizontal_position < HD and vertical_position < VD) else '0';
 
     process (clk)
      	 begin
-       		if (rising_edge(clk)) then
+       		if rising_edge(clk) then
 				if draw='1' then
-				    
-				    if horizontal_position < 300 and vertical_position < 300 then
+				
+				    if (horizontal_position >= 170 and horizontal_position < 470) and (vertical_position >= 90 and vertical_position < 390) then
 				        if read_address < (PICTURE_RESOLUTION-1) then
 				            read_address<=read_address+1;
 				        else
 				            read_address<=0;
 				        end if;
 				        
-				        if sw='1' then
-                            vga_red_o <= data(11 downto 8);
-                            vga_green_o <= data(7 downto 4);
-                            vga_blue_o <= data(3 downto 0);
-				        else
-				            vga_red_o <= data1(11 downto 8);
-                            vga_green_o <= data1(7 downto 4);
-                            vga_blue_o <= data1(3 downto 0);
-				        end if;
-				    else
-				        vga_red_o    <= "0000";
+				        vga_red_o <= data(11 downto 8);
+                        vga_green_o <= data(7 downto 4);
+                        vga_blue_o <= data(3 downto 0);
+                    else
+                        vga_red_o    <= "0000";
          			    vga_green_o  <= "0000";
          			    vga_blue_o   <= "0000";
 				    end if;
-
 				else
 					vga_red_o    <= "0000";
          			vga_green_o  <= "0000";
