@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_2" LaunchPart="xc7a50ticsg324-1L" LaunchTime="1697815577">
+<GenRun Id="impl_2" LaunchPart="xc7a100tcsg324-1" LaunchTime="1701094279">
   <File Type="ROUTE-PWR" Name="vga_controller_power_routed.rpt"/>
   <File Type="PA-TCL" Name="vga_controller.tcl"/>
   <File Type="ROUTE-PWR-SUM" Name="vga_controller_power_summary_routed.pb"/>
@@ -18,14 +18,10 @@
   <File Type="BITSTR-MMI" Name="vga_controller.mmi"/>
   <File Type="ROUTE-METHODOLOGY-DRC" Name="vga_controller_methodology_drc_routed.rpt"/>
   <File Type="BITSTR-SYSDEF" Name="vga_controller.sysdef"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="vga_controller_methodology_drc_routed.pb"/>
   <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
   <File Type="BITSTR-LTX" Name="vga_controller.ltx"/>
-  <File Type="BOOT-PDI-FILE" Name="vga_controller_soc.pdi"/>
   <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
-  <File Type="NPI_FILE" Name="vga_controller.npi"/>
   <File Type="OPT-DRC" Name="vga_controller_drc_opted.rpt"/>
-  <File Type="RBD_FILE" Name="vga_controller.rbd"/>
   <File Type="OPT-HWDEF" Name="vga_controller.hwdef"/>
   <File Type="PLACE-IO" Name="vga_controller_io_placed.rpt"/>
   <File Type="PLACE-UTIL" Name="vga_controller_utilization_placed.rpt"/>
@@ -59,13 +55,17 @@
   <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="vga_controller_timing_summary_postroute_physopted.rpx"/>
   <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="vga_controller_bus_skew_postroute_physopted.rpt"/>
   <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="vga_controller_bus_skew_postroute_physopted.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="vga_controller_methodology_drc_routed.pb"/>
   <File Type="ROUTE-DRC-RPX" Name="vga_controller_drc_routed.rpx"/>
   <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="vga_controller_methodology_drc_routed.rpx"/>
   <File Type="PDI-FILE" Name="vga_controller.pdi"/>
+  <File Type="BOOT-PDI-FILE" Name="vga_controller_soc.pdi"/>
   <File Type="PL-PDI-FILE" Name="vga_controller_pld.pdi"/>
   <File Type="RCFI_FILE" Name="vga_controller.rcfi"/>
   <File Type="CFI_FILE" Name="vga_controller.cfi"/>
   <File Type="RNPI_FILE" Name="vga_controller.rnpi"/>
+  <File Type="NPI_FILE" Name="vga_controller.npi"/>
+  <File Type="RBD_FILE" Name="vga_controller.rbd"/>
   <File Type="ROUTE-RQS" Name="vga_controller_routed.rqs"/>
   <File Type="POSTROUTE-PHYSOPT-RQS" Name="vga_controller_postroute_physopted.rqs"/>
   <File Type="ROUTE-RQS-RPT" Name="route_report_qor_suggestions_0.rpt"/>
@@ -84,7 +84,7 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/new/clk_mul.vhd">
+    <File Path="$PSRCDIR/sources_1/new/clk_div.vhd">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -97,6 +97,12 @@
       </FileInfo>
     </File>
     <File Path="$PSRCDIR/sources_1/new/horizontal_sync.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/mpg.vhd">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -147,14 +153,6 @@
         <Attr Name="AutoDcp" Val="1"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/utils_1/imports/synth_artixa7/vga_controller.dcp">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedInSteps" Val="synth_artixa7"/>
-        <Attr Name="AutoDcp" Val="1"/>
-      </FileInfo>
-    </File>
     <Config>
       <Option Name="TopAutoSet" Val="TRUE"/>
     </Config>
@@ -170,6 +168,5 @@
     <Step Id="route_design"/>
     <Step Id="post_route_phys_opt_design"/>
     <Step Id="write_bitstream"/>
-    <Step Id="write_device_image"/>
   </Strategy>
 </GenRun>
