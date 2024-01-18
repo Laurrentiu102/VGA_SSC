@@ -1,0 +1,25 @@
+Vivado Simulator v2023.1
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2023.1/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot vga_controller_behav xil_defaultlib.vga_controller -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package xil_defaultlib.resolution
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling architecture behavioral of entity xil_defaultlib.mpg [mpg_default]
+Compiling architecture behavioral of entity xil_defaultlib.bram [bram_default]
+Compiling architecture behavioral of entity xil_defaultlib.clk_div [clk_div_default]
+Compiling architecture behavioral of entity xil_defaultlib.horizontal_counter [horizontal_counter_default]
+Compiling architecture behavioral of entity xil_defaultlib.vertical_counter [vertical_counter_default]
+Compiling architecture behavioral of entity xil_defaultlib.horizontal_sync [horizontal_sync_default]
+Compiling architecture behavioral of entity xil_defaultlib.vertical_sync [vertical_sync_default]
+Compiling architecture behavioral of entity xil_defaultlib.vga_controller
+Built simulation snapshot vga_controller_behav

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1699549024">
+<GenRun Id="impl_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1701965175">
   <File Type="ROUTE-PWR" Name="vga_controller_power_routed.rpt"/>
   <File Type="PA-TCL" Name="vga_controller.tcl"/>
   <File Type="ROUTE-PWR-SUM" Name="vga_controller_power_summary_routed.pb"/>
@@ -126,14 +126,16 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/new/clk_div_25.vhd">
+    <File Path="$PSRCDIR/sources_1/imports/new/mpg_tb.vhd">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PSRCDIR/sources_1/new/mpg_tb.vhd"/>
+        <Attr Name="ImportTime" Val="1701965607"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/new/clk_mul.vhd">
+    <File Path="$PSRCDIR/sources_1/new/clk_divider_tb.vhd">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -165,14 +167,6 @@
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedInSteps" Val="synth_1"/>
-        <Attr Name="AutoDcp" Val="1"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/utils_1/imports/synth_artixa7/vga_controller.dcp">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedInSteps" Val="synth_artixa7"/>
         <Attr Name="AutoDcp" Val="1"/>
       </FileInfo>
     </File>

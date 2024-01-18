@@ -24,5 +24,5 @@ begin
                     vertical_sync <= not V_POL;
                  end if;
            end if; 
-        end process;
+         end process;
 end Behavioral;

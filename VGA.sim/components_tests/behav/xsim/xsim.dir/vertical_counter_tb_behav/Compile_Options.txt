@@ -1,0 +1,1 @@
+--incr --debug "typical" --relax --mt "2" -L "xil_defaultlib" -L "secureip" --snapshot "vertical_counter_tb_behav" "xil_defaultlib.vertical_counter_tb" -log "elaborate.log" 

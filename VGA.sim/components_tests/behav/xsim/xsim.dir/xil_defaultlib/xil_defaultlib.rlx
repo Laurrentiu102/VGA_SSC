@@ -1,0 +1,19 @@
+0.7
+2020.2
+May  7 2023
+15:24:31
+D:/SSC/VGA/VGA.srcs/components_tests/new/bram_tb.vhd,1703006795,vhdl,,,,bram_tb,,,,,,,,
+D:/SSC/VGA/VGA.srcs/components_tests/new/clk_div_tb.vhd,1703110693,vhdl,,,,clk_div_tb,,,,,,,,
+D:/SSC/VGA/VGA.srcs/components_tests/new/horizontal_counter_tb.vhd,1703004343,vhdl,,,,horizontal_counter_tb,,,,,,,,
+D:/SSC/VGA/VGA.srcs/components_tests/new/horizontal_sync_tb.vhd,1703005363,vhdl,,,,horizontal_sync_tb,,,,,,,,
+D:/SSC/VGA/VGA.srcs/components_tests/new/mpg_tb.vhd,1703006229,vhdl,,,,mpg_tb,,,,,,,,
+D:/SSC/VGA/VGA.srcs/components_tests/new/vertical_counter_tb.vhd,1703106214,vhdl,,,,vertical_counter_tb,,,,,,,,
+D:/SSC/VGA/VGA.srcs/components_tests/new/vertical_sync_tb.vhd,1703106535,vhdl,,,,vertical_sync_tb,,,,,,,,
+D:/SSC/VGA/VGA.srcs/sources_1/new/bram.vhd,1699548381,vhdl,D:/SSC/VGA/VGA.srcs/components_tests/new/bram_tb.vhd,,,bram,,,,,,,,
+D:/SSC/VGA/VGA.srcs/sources_1/new/clk_div.vhd,1699546831,vhdl,D:/SSC/VGA/VGA.srcs/components_tests/new/clk_div_tb.vhd,,,clk_div,,,,,,,,
+D:/SSC/VGA/VGA.srcs/sources_1/new/horizontal_counter.vhd,1697385504,vhdl,D:/SSC/VGA/VGA.srcs/components_tests/new/horizontal_counter_tb.vhd,,,horizontal_counter,,,,,,,,
+D:/SSC/VGA/VGA.srcs/sources_1/new/horizontal_sync.vhd,1697386908,vhdl,D:/SSC/VGA/VGA.srcs/components_tests/new/horizontal_sync_tb.vhd,,,horizontal_sync,,,,,,,,
+D:/SSC/VGA/VGA.srcs/sources_1/new/mpg.vhd,1699381547,vhdl,D:/SSC/VGA/VGA.srcs/components_tests/new/mpg_tb.vhd,,,mpg,,,,,,,,
+D:/SSC/VGA/VGA.srcs/sources_1/new/resolution.vhd,1699546569,vhdl,D:/SSC/VGA/VGA.srcs/components_tests/new/vertical_sync_tb.vhd;D:/SSC/VGA/VGA.srcs/sources_1/new/vertical_sync.vhd,,,resolution,,,,,,,,
+D:/SSC/VGA/VGA.srcs/sources_1/new/vertical_counter.vhd,1697385568,vhdl,D:/SSC/VGA/VGA.srcs/components_tests/new/vertical_counter_tb.vhd,,,vertical_counter,,,,,,,,
+D:/SSC/VGA/VGA.srcs/sources_1/new/vertical_sync.vhd,1697386902,vhdl,D:/SSC/VGA/VGA.srcs/components_tests/new/vertical_sync_tb.vhd,,,vertical_sync,,,,,,,,

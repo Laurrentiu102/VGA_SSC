@@ -1,0 +1,14 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../VGA.srcs/sources_1/new/resolution.vhd" \
+"../../../../VGA.srcs/sources_1/new/bram.vhd" \
+"../../../../VGA.srcs/sources_1/new/clk_div.vhd" \
+"../../../../VGA.srcs/sources_1/new/horizontal_counter.vhd" \
+"../../../../VGA.srcs/sources_1/new/horizontal_sync.vhd" \
+"../../../../VGA.srcs/sources_1/new/mpg.vhd" \
+"../../../../VGA.srcs/sources_1/new/vertical_counter.vhd" \
+"../../../../VGA.srcs/sources_1/new/vertical_sync.vhd" \
+"../../../../VGA.srcs/sources_1/new/vga_controller.vhd" \
+
+# Do not sort compile order
+nosort

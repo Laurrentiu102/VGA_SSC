@@ -1,11 +1,11 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
-| Date         : Thu Nov  9 19:00:30 2023
+| Date         : Thu Dec  7 18:10:01 2023
 | Host         : LAURPC running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file vga_controller_control_sets_placed.rpt
 | Design       : vga_controller
-| Device       : xc7a35t
+| Device       : xc7a100t
 ---------------------------------------------------------------------------------------------------------------------------------------------
 
 Control Set Information
@@ -27,7 +27,7 @@ Table of Contents
 |    Minimum number of control sets                        |     9 |
 |    Addition due to synthesis replication                 |     0 |
 |    Addition due to physical synthesis replication        |     0 |
-| Unused register locations in slices containing registers |    43 |
+| Unused register locations in slices containing registers |    40 |
 +----------------------------------------------------------+-------+
 * Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
 ** Run report_qor_suggestions for automated merging and remapping suggestions
@@ -60,10 +60,10 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | No           | No                    | No                     |              29 |           11 |
 | No           | No                    | Yes                    |               0 |            0 |
-| No           | Yes                   | No                     |              45 |           19 |
+| No           | Yes                   | No                     |              45 |           22 |
 | Yes          | No                    | No                     |               0 |            0 |
 | Yes          | No                    | Yes                    |               0 |            0 |
-| Yes          | Yes                   | No                     |            3475 |         1930 |
+| Yes          | Yes                   | No                     |              78 |           36 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
@@ -74,14 +74,14 @@ Table of Contents
 |     Clock Signal     |         Enable Signal        |              Set/Reset Signal              | Slice Load Count | Bel Load Count | Bels / Slice |
 +----------------------+------------------------------+--------------------------------------------+------------------+----------------+--------------+
 |  ram_images/mono/btn |                              |                                            |                1 |              1 |         1.00 |
-|  clk_BUFG            |                              | vc/vertical_position_counter_reg[1]_0      |                1 |              1 |         1.00 |
 |  clk_BUFG            |                              | hc/horizontal_position_counter_reg[9]_0    |                1 |              1 |         1.00 |
+|  clk_BUFG            |                              | vc/vertical_position_counter_reg[1]_0      |                1 |              1 |         1.00 |
 |  clk_board_IBUF_BUFG |                              |                                            |                1 |              3 |         3.00 |
-|  clk_BUFG            |                              | hc/horizontal_position_counter_reg[7]_0    |                9 |             12 |         1.33 |
+|  clk_BUFG            |                              | hc/horizontal_position_counter_reg[7]_0    |               11 |             12 |         1.09 |
 |  clk_BUFG            |                              |                                            |                9 |             25 |         2.78 |
-|  clk_BUFG            |                              | hc/horizontal_position_counter[30]_i_1_n_0 |                8 |             31 |         3.88 |
+|  clk_BUFG            |                              | hc/horizontal_position_counter[30]_i_1_n_0 |                9 |             31 |         3.44 |
 |  clk_BUFG            | hc/vertical_position_counter | vc/vertical_position_counter[0]_i_1_n_0    |                8 |             31 |         3.88 |
-|  clk_BUFG            | hc/vga_red_o[3]_i_1_0        | hc/read_address_reg[15]                    |             1922 |           3444 |         1.79 |
+|  clk_BUFG            | hc/vga_red_o[3]_i_1_0        | hc/read_address_reg[15]                    |               28 |             47 |         1.68 |
 +----------------------+------------------------------+--------------------------------------------+------------------+----------------+--------------+
 
 

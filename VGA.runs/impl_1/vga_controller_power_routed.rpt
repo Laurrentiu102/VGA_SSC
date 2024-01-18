@@ -1,11 +1,11 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
-| Date             : Thu Nov  9 19:02:05 2023
+| Date             : Thu Dec  7 18:12:09 2023
 | Host             : LAURPC running 64-bit major release  (build 9200)
 | Command          : report_power -file vga_controller_power_routed.rpt -pb vga_controller_power_summary_routed.pb -rpx vga_controller_power_routed.rpx
 | Design           : vga_controller
-| Device           : xc7a35tcpg236-1
+| Device           : xc7a100tcsg324-1
 | Design State     : routed
 | Grade            : commercial
 | Process          : typical
@@ -29,20 +29,20 @@ Table of Contents
 1. Summary
 ----------
 
-+--------------------------+----------------------------------+
-| Total On-Chip Power (W)  | 18.611 (Junction temp exceeded!) |
-| Design Power Budget (W)  | Unspecified*                     |
-| Power Budget Margin (W)  | NA                               |
-| Dynamic (W)              | 18.188                           |
-| Device Static (W)        | 0.423                            |
-| Effective TJA (C/W)      | 5.0                              |
-| Max Ambient (C)          | 0.0                              |
-| Junction Temperature (C) | 118.0                            |
-| Confidence Level         | Low                              |
-| Setting File             | ---                              |
-| Simulation Activity File | ---                              |
-| Design Nets Matched      | NA                               |
-+--------------------------+----------------------------------+
++--------------------------+--------------+
+| Total On-Chip Power (W)  | 4.936        |
+| Design Power Budget (W)  | Unspecified* |
+| Power Budget Margin (W)  | NA           |
+| Dynamic (W)              | 4.811        |
+| Device Static (W)        | 0.125        |
+| Effective TJA (C/W)      | 4.6          |
+| Max Ambient (C)          | 62.5         |
+| Junction Temperature (C) | 47.5         |
+| Confidence Level         | Low          |
+| Setting File             | ---          |
+| Simulation Activity File | ---          |
+| Design Nets Matched      | NA           |
++--------------------------+--------------+
 * Specify Design Power Budget using, set_operating_conditions -design_power_budget <value in Watts>
 
 
@@ -52,18 +52,18 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Slice Logic    |     0.841 |    28674 |       --- |             --- |
-|   LUT as Logic |     0.732 |    17952 |     20800 |           86.31 |
-|   CARRY4       |     0.056 |       25 |      8150 |            0.31 |
-|   Register     |     0.031 |     3549 |     41600 |            8.53 |
+| Slice Logic    |     0.825 |    25277 |       --- |             --- |
+|   LUT as Logic |     0.716 |    17938 |     63400 |           28.29 |
+|   CARRY4       |     0.058 |       25 |     15850 |            0.16 |
+|   Register     |     0.031 |      152 |    126800 |            0.12 |
 |   BUFG         |     0.021 |        2 |        32 |            6.25 |
 |   Others       |     0.000 |       16 |       --- |             --- |
-|   F7/F8 Muxes  |     0.000 |     6969 |     32600 |           21.38 |
-| Signals        |    14.723 |    14745 |       --- |             --- |
-| Block RAM      |     2.616 |       36 |        50 |           72.00 |
-| I/O            |     0.008 |       16 |       106 |           15.09 |
-| Static Power   |     0.423 |          |           |                 |
-| Total          |    18.611 |          |           |                 |
+|   F7/F8 Muxes  |     0.000 |     6968 |     63400 |           10.99 |
+| Signals        |     1.362 |    11336 |       --- |             --- |
+| Block RAM      |     2.616 |       36 |       135 |           26.67 |
+| I/O            |     0.008 |       16 |       210 |            7.62 |
+| Static Power   |     0.125 |          |           |                 |
+| Total          |     4.936 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -73,16 +73,16 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       1.000 |    18.239 |      17.954 |      0.285 |       NA    | Unspecified | NA         |
-| Vccaux    |       1.800 |     0.045 |       0.000 |      0.045 |       NA    | Unspecified | NA         |
-| Vcco33    |       3.300 |     0.001 |       0.000 |      0.001 |       NA    | Unspecified | NA         |
+| Vccint    |       1.000 |     4.614 |       4.577 |      0.037 |       NA    | Unspecified | NA         |
+| Vccaux    |       1.800 |     0.020 |       0.000 |      0.020 |       NA    | Unspecified | NA         |
+| Vcco33    |       3.300 |     0.004 |       0.000 |      0.004 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vccaux_io |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
-| Vccbram   |       1.000 |     0.251 |       0.234 |      0.017 |       NA    | Unspecified | NA         |
+| Vccbram   |       1.000 |     0.236 |       0.234 |      0.002 |       NA    | Unspecified | NA         |
 | MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vccadc    |       1.800 |     0.020 |       0.000 |      0.020 |       NA    | Unspecified | NA         |
@@ -113,7 +113,7 @@ Table of Contents
 
 +-----------------------+--------------------------+
 | Ambient Temp (C)      | 25.0                     |
-| ThetaJA (C/W)         | 5.0                      |
+| ThetaJA (C/W)         | 4.6                      |
 | Airflow (LFM)         | 250                      |
 | Heat Sink             | medium (Medium Profile)  |
 | ThetaSA (C/W)         | 4.6                      |
@@ -140,12 +140,12 @@ Table of Contents
 +----------------+-----------+
 | Name           | Power (W) |
 +----------------+-----------+
-| vga_controller |    18.188 |
-|   clk_divider  |     0.063 |
-|   hc           |     0.350 |
-|   ram_images   |     4.190 |
-|     mono       |     0.091 |
-|   vc           |     0.024 |
+| vga_controller |     4.811 |
+|   clk_divider  |     0.045 |
+|   hc           |     0.317 |
+|   ram_images   |     4.209 |
+|     mono       |     0.090 |
+|   vc           |     0.029 |
 +----------------+-----------+
 
 

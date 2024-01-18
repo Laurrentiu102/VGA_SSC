@@ -110,6 +110,8 @@ read_xdc D:/SSC/VGA/VGA.srcs/constrs_2/new/Artix.xdc
 set_property used_in_implementation false [get_files D:/SSC/VGA/VGA.srcs/constrs_2/new/Artix.xdc]
 
 set_param ips.enableIPCacheLiteLoad 1
+
+read_checkpoint -auto_incremental -incremental D:/SSC/VGA/VGA.srcs/utils_1/imports/synth_2/vga_controller.dcp
 close [open __synthesis_is_running__ w]
 
 OPTRACE "synth_design" START { }
